@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+    <div class="main container">
+        <% blogsejs.forEach(function(blog){ %>
+        
+            <div>
+                <h2> <%= blog.title %> </h2>
+                <img src="<%= blog.image %>">
+                <span> <%= blog.created %></span>
+                <p> <%= blog.body.substring(0, 100) %>... <a href="/blogs/<%=blog._id%>">read more</a></p>
+                
+            </div>
+            
+        <% }) %>
+    </div>
+
+<% include ./partials/footer %>
